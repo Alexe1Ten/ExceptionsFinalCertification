@@ -1,7 +1,7 @@
-package Presenter;
+package presenter;
 
-import Model.Adapter;
-import View.ViewController;
+import model.Adapter;
+import view.ViewController;
 
 public class Presenter {
     private boolean flag = true;
@@ -14,7 +14,6 @@ public class Presenter {
             
             switch (choice) {
                 case 1:
-                
                     String data = viewController.inputData();
                     System.out.println(adapter.adapterData(data));
                     
@@ -30,3 +29,4 @@ public class Presenter {
         }
     }
 }
+// Ivanov Ivan Ivanivich 01.01.1990 9999 f

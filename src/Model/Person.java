@@ -1,11 +1,11 @@
-package Model;
+package model;
 
 public class Person {
     private String surname;
     private String name;
     private String patronymic;
     private String birthday;
-    private int phoneNumber;
+    private Integer phoneNumber;
     private char gender;
 
     public Person(String surname, String name, String patronymic, 
@@ -35,7 +35,7 @@ public class Person {
         return birthday;
     }
 
-    public int getPhonenumber() {
+    public Integer getPhonenumber() {
         return phoneNumber;
     }
 
@@ -44,7 +44,7 @@ public class Person {
     }
     @Override
     public String toString() {
-        return String.format("<%s> <$s> <%s> <$s> <%d> <%s>", 
+        return String.format("<%s> <%s> <%s> <%s> <%d> <%c>", 
         surname, name, patronymic, birthday, phoneNumber, gender);
     }
 }

@@ -1,22 +1,28 @@
 package model;
 
+import java.util.Date;
+
 public class Person {
     private String surname;
     private String name;
     private String patronymic;
-    private String birthday;
+    private Date date;
     private Integer phoneNumber;
     private char gender;
 
     public Person(String surname, String name, String patronymic, 
-        String birthday, int phoneNumber, char gender) {
+        Date date, int phoneNumber, char gender) {
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;
-        this.birthday = birthday;
+        this.date = date;
         this.phoneNumber = phoneNumber;
         this.gender = gender;
 
+    }
+
+    public Person() {
+        super();
     }
 
     public String getSurname() {
@@ -31,8 +37,8 @@ public class Person {
         return patronymic;
     }
 
-    public String getBirthday() {
-        return birthday;
+    public Date getBirthday() {
+        return date;
     }
 
     public Integer getPhonenumber() {
@@ -45,6 +51,6 @@ public class Person {
     @Override
     public String toString() {
         return String.format("<%s> <%s> <%s> <%s> <%d> <%c>", 
-        surname, name, patronymic, birthday, phoneNumber, gender);
+        surname, name, patronymic, date, phoneNumber, gender);
     }
 }

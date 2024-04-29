@@ -1,14 +1,16 @@
 package model;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileController {
-    private String path;
 
     public void savePerson(Person person) throws IOException{
-        this.path = "data/" + person.getSurname() + ".txt";
-        try (FileWriter fw = new FileWriter(path)) {
+        String name = person.getSurname() + ".txt";
+        String path = "src/data/";
+        File file = new File(path + name);
+        try (FileWriter fw = new FileWriter(file, true)) {
             fw.write(person.toString() + "\n");
             fw.flush();
         }
